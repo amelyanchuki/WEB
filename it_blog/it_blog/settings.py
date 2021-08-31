@@ -86,6 +86,8 @@ DATABASE = {
         "USER": "blog",
         "PASSWORD": "qwerty12345",
         "HOST": "127.0.0.1",
+        "port": 5432,
+        
         
 
 
