@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "home",
     "blog",
+    "user",
+    
 ]
 
 MIDDLEWARE = [
@@ -75,27 +77,22 @@ WSGI_APPLICATION = 'it_blog.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-DATABASE = {
-    "default":{
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "blog",
-        "USER": "blog",
-        "PASSWORD": "qwerty12345",
-        "HOST": "127.0.0.1",
-        "port": 5432,
-
-        
-
-
-
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+# DATABASE = {
+#     "default":{
+#         "ENGINE": "django.db.backends.postgresql",
+#         "NAME": "blog",
+#         "USER": "blog",
+#         "PASSWORD": "qwerty12345",
+#         "HOST": "127.0.0.1",
+#         "port": 5432,
+#     }
+# }
 
 
 
@@ -142,3 +139,4 @@ STATICFILES_DIRS = [BASE_DIR / "it_blog" / "static"]
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+AUTH_USER_MODEL = "user.User"
