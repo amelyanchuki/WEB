@@ -13,7 +13,7 @@
         <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
           <ul class="navbar-nav">
             <li><a href="{% url 'home_page'%}">Home</a></li>
-            <li><a href="about.html">About</a></li>
+            {% comment %} <li><a href="about.html">About</a></li> {% endcomment %}
             <li><a href="courses.html">Courses</a></li>
             <li class="dropdown">
               <a class="dropdown-toggle" href="#" data-toggle="dropdown">
@@ -34,6 +34,7 @@
               </div>
             </li>
             <li><a href="contacts.html">Contacts</a></li>
+            <li><a href="{% url 'signin_page' %}">Sign In</a></li>
 
             <li>
               <button class="search">

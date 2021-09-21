@@ -5,6 +5,7 @@ from django.core.exceptions import ValidationError
 from django.db.models.signals import pre_save
 from django.dispatch.dispatcher import receiver
 from django.utils.deconstruct import deconstructible
+from django.utils.html import mark_safe
 
 
 
@@ -30,6 +31,14 @@ class User(AbstractUser):
 
     def send_sms(self, message):
         ...
+    
+    def show_image(self):
+            return mark_safe(
+                '<img src="{}" width="150px" />'.format("https://media.comicbook.com/2021/02/avatar-the-last-airbender-fan-reactions-1258238-1280x0.jpeg"))
+
+    show_image.short_description = "Avatar" 
+    show_image.allow_tags = True
+
 
 
     def __str__(self) -> str:

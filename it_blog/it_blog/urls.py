@@ -24,5 +24,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("home/", include("home.urls")),
     path("blog/", include("blog.urls")),
+    path("user/", include("user.urls")),
     path("", lambda requset: redirect("/home")),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
